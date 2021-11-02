@@ -11,26 +11,25 @@
 
 <body>
     <header>
-        <div class="header__container">
-            <div class="header__wrapper">
-                <h2 class="header__logo"> sneakers</h2>
-                <ul class="header__links">
-                    <li><a class="active" href="#home">sneakers</a></li>
-                    <li><a href="#news">Collections</a></li>
-                    <li><a href="#contact">Men</a></li>
-                    <li><a href="#about">Women</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#about">Contact</a></li>
-                </ul>
+        <div class="header__hamburger-group">
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
             </div>
-            <div class="header__wrapper">
-                <div class="header__cart">
-                    <img class="avatar" src="./images/icon-cart.svg">
-                </div>
-                <img class="header__avatar" alt="profile-image" src="./images/image-avatar.png">
+            <img src="./images/logo.svg" alt="logo icon">
+            <nav class="header__menu"></nav>
+        </div>
+        <div class="header__avatar-group">
+            <div class="header__cart">
+                <img src="images/icon-cart.svg" alt="cart icon">
+                <div class="header__cart-count"></div>
             </div>
+            <img class="header__avatar" src="./images/image-avatar.png" alt="image avatar">
         </div>
     </header>
+
+
     <main>
         <section class="product__container">
             <div class="product__image">
