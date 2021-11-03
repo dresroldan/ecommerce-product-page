@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap'); */
 
 :root {
   /* primary */
@@ -74,4 +74,58 @@ header {
 .header__avatar:hover {
   border: 2px solid var(--orange);
   border-radius: 50%;
+}
+
+
+.product__details{
+padding: 30px;
+}
+
+h2{
+margin-bottom: 20px;
+
+}
+
+.product__brandname{
+
+  color: var(--orange);
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+
+.product__description{
+color: var(--darkGrayBlue);
+margin-bottom: 25px;
+}
+
+
+.product__pricing{
+
+  display: flex;
+  flex-direction:row;
+  margin-bottom: 20px;
+
+}
+
+.product__quantity{
+
+display: flex;
+justify-content: space-between;
+background-color: var(--lightGrayBlue);
+margin-bottom: 20px;
+padding: 15px;
+border-radius: 5px;
+}
+
+
+
+.product__cart-button{
+background-color: var(--orange);
+color: var(--white);
+text-align: center;
+width: 100%;
+padding:15px;
+border:none;
+border-radius: 5px;
 }
