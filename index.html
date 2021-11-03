@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontend Mentor - E-commerce product page</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -28,25 +32,32 @@
             <img class="header__avatar" src="./images/image-avatar.png" alt="image avatar">
         </div>
     </header>
-
-
     <main>
         <section class="product__container">
             <div class="product__image">
             </div>
         </section>
         <section class="product__details">
-            <p>sneaker company</p>
-            <h1>FAll Limited Edition Sneakers</h1>
-            <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole,
+            <h1 class="product__brandname">SNEAKER COMPANY</h1>
+            <h2>Fall Limited Edition Sneakers</h2>
+            <p class="product__description">These low-profile sneakers are your perfect casual wear companion. Featuring
+                a durable rubber outer sole,
                 they’ll withstand everything the weather can offer.</p>
-            <p>$125.00</p>
-            <div class="product__discount">50%</div>
-            <p>$250.00</p>
-            <div class="product__quantity">
-                <button>-</button><span></span><button>+</button>
-                <button class="product__cart-button">Add to cart</button>
+            <div class="product__pricing">
+                <strong>$125.00</strong>
+                <div class="product__discount">50%</div>
+                <p>$250.00</p>
             </div>
+            <div class="product__quantity">
+                <div class="product__icon">
+                    <img src="images/icon-minus.svg" alt="minus icon">
+                </div>
+                <strong>0</strong>
+                <div class="product__icon">
+                    <img src="images/icon-plus.svg" alt="plus icon">
+                </div>
+            </div>
+            <button class="product__cart-button">Add to cart</button>
         </section>
     </main>
 </body>
