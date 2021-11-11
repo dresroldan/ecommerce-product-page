@@ -15,64 +15,63 @@
 
 <body>
     <header>
-        <div class="header__hamburger-group">
+        <div class="header__container">
             <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+                <div class="hamburger__line"></div>
+                <div class="hamburger__line"></div>
+                <div class="hamburger__line"></div>
             </div>
-            <img src="./images/logo.svg" alt="logo icon">
-            <nav class="header__menu hidden">
-                <div class="header__sidemenu">
-                    <img src="./images/icon-close.svg" alt="icon close">
-                    <ul>
-                        <li><a href="#">Collections</a></li>
-                        <li><a href="#">Men</a></li>
-                        <li><a href="#">Women</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
+            <img class="header__logo" src="./images/logo.svg" alt="logo icon">
+            <nav class="navbar navbar--hidden">
+                <div class="navbar__sidepanel">
+                    <img class="navbar__btn" src="./images/icon-close.svg" alt="icon close">
+                    <ul class="navbar__list">
+                        <li class="navbar__list-item"><a href="#">Collections</a></li>
+                        <li class="navbar__list-item"><a href="#">Men</a></li>
+                        <li class="navbar__list-item"><a href="#">Women</a></li>
+                        <li class="navbar__list-item"><a href="#">About</a></li>
+                        <li class="navbar__list-item"><a href="#">Contact</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
-        <div class="header__avatar-group">
-            <div class="header__cart">
-                <img src="images/icon-cart.svg" alt="cart icon">
-                <div class="header__cart-count"></div>
+        <div class="header__container">
+            <div class="cart__wrapper">
+                <img class="cart__btn" src="images/icon-cart.svg" alt="cart icon">
+                <div class="cart__count"></div>
             </div>
             <img class="header__avatar" src="./images/image-avatar.png" alt="image avatar">
         </div>
     </header>
     <main>
         <section class="product__container">
-            <div class="product__image">
-                <img class="product__main" src="./images/image-product-1.jpg" alt="sneaker product">
-            </div>
+            <img class="product__img" src="./images/image-product-1.jpg" alt="sneaker product">
         </section>
-        <section class="product__details">
-            <h1 class="product__brandname">SNEAKER COMPANY</h1>
+        <section class="product__container">
+            <h1>SNEAKER COMPANY</h1>
             <h2>Fall Limited Edition Sneakers</h2>
             <p class="product__description">These low-profile sneakers are your perfect casual wear companion. Featuring
                 a durable rubber outer sole,
                 they’ll withstand everything the weather can offer.</p>
-            <div class="product__pricing">
-                <strong>$125.00</strong>
-                <div class="product__discount">50%</div>
-                <p>$250.00</p>
+            <div class="price__wrapper">
+                <div class="price__group">
+                    <strong>$125.00</strong>
+                    <div class="price__discount">50%</div>
+                </div>
+                <p class="price__old">$250.00</p>
             </div>
-            <div class="product__quantity">
-                <div class="product__icon">
+            <div class="count__wrapper">
+                <div class="count__icon">
                     <img src="images/icon-minus.svg" alt="minus icon">
                 </div>
                 <strong>0</strong>
-                <div class="product__icon">
+                <div class="count__icon">
                     <img src="images/icon-plus.svg" alt="plus icon">
                 </div>
             </div>
-            <button class="product__cart-button">Add to cart</button>
+            <button class="product__btn">Add to cart</button>
         </section>
     </main>
-
     <script src="./script.js"></script>
 </body>
 
