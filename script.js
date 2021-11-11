@@ -1,13 +1,13 @@
-const menu = document.querySelector('.header__menu');
+const navbar = document.querySelector('.navbar');
 const btnHamburger = document.querySelector('.hamburger');
-const btnMenuClose = document.querySelector('#btnMenuClose');
+const btnMenuClose = document.querySelector('.navbar__btn');
 
 const onHamburgerClick = () => {
-  menu.classList.remove('hidden');
+  navbar.classList.remove('navbar--hidden');
 };
 
 const onMenuCloseClick = () => {
-  menu.classList.add('hidden');
+  navbar.classList.add('navbar--hidden');
 };
 
 btnHamburger.addEventListener('click', onHamburgerClick);
