@@ -24,6 +24,8 @@ body {
   height: 100vh;
 }
 
+/* ---------------------- header // navbar -------------------------------- */
+
 header {
   display: flex;
   flex-direction: row;
@@ -32,7 +34,7 @@ header {
   padding: 25px;
 }
 
-.header__container {
+.header-container {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -49,7 +51,7 @@ header {
   cursor: pointer;
 }
 
-.hamburger__line {
+.hamburger-line {
   background-color: var(--darkGrayBlue);
   width: 18px;
   height: 3px;
@@ -70,24 +72,24 @@ header {
   display: none;
 }
 
-.navbar__sidepanel {
+.navbar-side-menu {
   background-color: var(--white);
   height: 100vh;
   width: 66vw;
   padding: 35px;
 }
 
-.navbar__btn {
+.navbar-btn {
   transition: transform 0.5s ease;
   cursor: pointer;
 }
 
-.navbar__btn:hover {
+.navbar-btn:hover {
   cursor: pointer;
   transform: rotate(90deg);
 }
 
-.navbar__list {
+.navbar-list {
   margin-top: 40px;
   font-size: 16px;
   font-weight: 700;
@@ -97,22 +99,22 @@ header {
   list-style: none;
 }
 
-.navbar__list-item > a {
+.navbar-link {
   text-decoration: none;
   color: var(--black);
 }
 
-.navbar__list-item > a:hover {
+.navbar-link:hover {
   text-decoration: underline;
 }
 
-.cart__wrapper {
+.cart-wrapper {
   display: flex;
   justify-content: center;
   position: relative;
 }
 
-.cart__count {
+.cart-count {
   position: absolute;
   top: -25%;
   right: -25%;
@@ -125,16 +127,17 @@ header {
   padding: 0px 4px;
 }
 
-.header__avatar {
+.avatar {
   width: 28px;
   cursor: pointer;
   border: 2px solid transparent;
 }
 
-.header__avatar:hover {
+.avatar:hover {
   border: 2px solid var(--orange);
   border-radius: 50%;
 }
+/* ---------------------- main content -------------------------------- */
 
 main {
   display: flex;
@@ -143,12 +146,28 @@ main {
   justify-content: center;
 }
 
-.product {
+.lightbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-group {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.product-info {
   padding: 25px 25px 85px 25px;
 }
 
-.product__img {
-  width: 375px;
+.product-hero {
+  width: 100%;
+}
+
+.thumb-gallery-img {
+  display: none;
 }
 
 h1 {
@@ -164,13 +183,13 @@ h2 {
   font-size: 30px;
 }
 
-.product__description {
+p {
   color: var(--darkGrayBlue);
   margin-bottom: 25px;
   line-height: 25px;
 }
 
-.price__wrapper {
+.price-wrapper {
   display: flex;
   flex-direction: row;
   margin-bottom: 30px;
@@ -178,7 +197,7 @@ h2 {
   align-items: center;
 }
 
-.price__group {
+.price-group {
   display: flex;
   gap: 20px;
   align-items: center;
@@ -189,7 +208,7 @@ h2 {
   font-weight: 700;
 }
 
-.price__discount {
+.price-discount {
   background-color: var(--paleOrange);
   color: var(--orange);
   padding: 5px;
@@ -198,13 +217,13 @@ h2 {
   font-size: 18px;
 }
 
-.price__old {
+.price-old {
   text-decoration: line-through;
   font-weight: 700;
   color: var(--darkGrayBlue);
 }
 
-.count__wrapper {
+.count-wrapper {
   display: flex;
   justify-content: space-between;
   background-color: var(--lightGrayBlue);
@@ -213,11 +232,11 @@ h2 {
   border-radius: 5px;
 }
 
-.count__icon {
+.count-icon {
   cursor: pointer;
 }
 
-.product__btn {
+.product-btn {
   background-color: var(--orange);
   color: var(--white);
   text-align: center;
@@ -228,9 +247,23 @@ h2 {
   cursor: pointer;
 }
 
+/* ---------------------- media queries -------------------------------- */
+
 @media screen and (min-width: 1000px) {
+  body {
+    margin-left: 75px;
+    margin-right: 75px;
+  }
+
   main {
+    height: 80vh;
     flex-direction: row;
+    margin: 27px 84px;
+    gap: 100px;
+  }
+
+  header {
+    border-bottom: 1px solid #b6bcc8;
   }
 
   .hamburger {
@@ -245,31 +278,48 @@ h2 {
     background-color: unset;
   }
 
-  .navbar__btn {
+  .navbar-btn {
     display: none;
   }
 
-  .navbar__sidepanel {
+  .navbar-side-menu {
     width: unset;
     padding: 0;
     height: unset;
   }
 
-  .navbar__list {
+  .navbar-list {
+    margin-top: unset;
+    font-weight: unset;
     flex-direction: row;
   }
 
-  .navbar__list {
-    margin-top: unset;
-    font-weight: unset;
-  }
-
-  .navbar__list-item > a {
+  .navbar-ink {
     display: block;
     padding: 30px 0px;
   }
 
-  .header__container {
+  .header-container {
     gap: 40px;
+  }
+
+  .lightbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product-img {
+    border-radius: 20px;
+  }
+  .thumb-gallery-img {
+    width: 100px;
+    border-radius: 10px;
+    
+  }
+
+  .price-wrapper {
+    flex-direction: row;
   }
 }
