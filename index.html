@@ -14,16 +14,13 @@
 </head>
 
 <body>
-
     <header>
         <div class="header-container">
-
             <div class="hamburger">
                 <div class="hamburger-line"></div>
                 <div class="hamburger-line"></div>
                 <div class="hamburger-line"></div>
             </div>
-
             <img class="logo" src="./images/logo.svg" alt="logo icon">
             <nav role="navigation" class="navbar navbar--hidden">
                 <div class="navbar-side-menu">
@@ -48,20 +45,30 @@
     </header>
 
     <main>
-
         <section class="lightbox">
-
             <img class="product-hero" src="./images/image-product-1.jpg" alt="sneaker product">
 
-            <div class="thumb-gallery">
-                <img class="thumb-gallery-img" src="./images/image-product-1.jpg" alt="sneaker product">
-                <img class="thumb-gallery-img" src="./images/image-product-1.jpg" alt="sneaker product">
-                <img class="thumb-gallery-img" src="./images/image-product-1.jpg" alt="sneaker product">
-
+            <div class="arrow previous">
+                <img src="./images/icon-previous.svg" alt="icon previous">
             </div>
-
+            <div class="arrow next">
+                <img src="./images/icon-next.svg" alt="icon next">
+            </div>
+            <div class="thumb-gallery">
+                <div class="pic active">
+                    <img src="./images/image-product-1-thumbnail.jpg" alt="thumb-1">
+                </div>
+                <div class="pic">
+                    <img src="./images/image-product-2-thumbnail.jpg" alt="thumb-2">
+                </div>
+                <div class="pic">
+                    <img src="./images/image-product-3-thumbnail.jpg" alt="thumb-3">
+                </div>
+                <div class="pic">
+                    <img src="./images/image-product-4-thumbnail.jpg" alt="thumb-4">
+                </div>
+            </div>
         </section>
-
         <section class="product-info">
             <h1>SNEAKER COMPANY</h1>
             <h2>Fall Limited Edition Sneakers</h2>
@@ -69,8 +76,6 @@
                 Featuring
                 a durable rubber outer sole,
                 they’ll withstand everything the weather can offer.</p>
-
-
             <div class="price-wrapper">
                 <div class="price-group">
                     <div class="price">$125.00</div>
@@ -78,7 +83,6 @@
                 </div>
                 <p class="price-previous">$250.00</p>
             </div>
-
             <div class="count-wrapper">
                 <div class="count-icon count-icon--minus">
                     <img src="images/icon-minus.svg" alt="minus icon">
@@ -90,11 +94,8 @@
             </div>
             <button class="product-btn">Add to cart</button>
         </section>
-
     </main>
-
     <script src="./script.js"></script>
-
 </body>
 
 </html>
