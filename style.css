@@ -137,7 +137,7 @@ header {
   border: 2px solid var(--orange);
   border-radius: 50%;
 }
-/* ---------------------- main content -------------------------------- */
+/* ---------------------- lightbox -------------------------------- */
 
 main {
   display: flex;
@@ -147,15 +147,29 @@ main {
 }
 
 .lightbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+position:relative;
 }
 
-.lightbox-group {
+.arrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  width: 40px;
+  height: 40px;
   display: flex;
-  margin-top: 20px;
-  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  cursor:pointer;
+  border-radius: 20px;
+  }
+
+.previous{
+ left: 4%;
+}
+
+.next{
+right: 4%;
 }
 
 .product-info {
@@ -166,9 +180,13 @@ main {
   width: 100%;
 }
 
-.thumb-gallery-img {
+.thumb-gallery{
   display: none;
 }
+
+
+/* ---------------------- product info -------------------------------- */
+
 
 h1 {
   color: var(--orange);
@@ -309,6 +327,12 @@ p {
     align-items: center;
     justify-content: center;
   }
+
+
+.arrow{
+  display: none;
+}
+
 
   .product-img {
     border-radius: 20px;
