@@ -34,12 +34,19 @@ header {
   padding: 25px;
 }
 
-.header-container {
+.header-group {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+}
+
+.header-group.left {
+  gap: 15px;
+}
+
+.header-group.right {
+  gap: 22px;
 }
 
 .hamburger {
@@ -128,7 +135,11 @@ header {
 }
 
 .avatar {
-  width: 40px;
+  display: flex;
+}
+
+.avatar > img {
+  width: 28px;
   cursor: pointer;
   border: 2px solid transparent;
 }
@@ -186,6 +197,10 @@ main {
 
 /* ---------------------- product info -------------------------------- */
 
+.product-info {
+  padding: 25px 25px 88px 25px;
+}
+
 h1 {
   color: var(--orange);
   font-size: 12px;
@@ -202,12 +217,13 @@ p {
   color: var(--darkGrayBlue);
   margin-bottom: 25px;
   line-height: 25px;
+  font-size: 15px;
 }
 
 .price-wrapper {
   display: flex;
   flex-direction: row;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   justify-content: space-between;
   align-items: center;
 }
@@ -232,18 +248,18 @@ p {
   font-size: 18px;
 }
 
-.price-old {
+.price-previous {
   text-decoration: line-through;
   font-weight: 700;
   color: var(--darkGrayBlue);
 }
 
-.count-wrapper {
+.count-btn {
   display: flex;
   justify-content: space-between;
   background-color: var(--lightGrayBlue);
-  margin-bottom: 20px;
-  padding: 15px;
+  margin-bottom: 16px;
+  padding: 22px 24px 22px 24px;
   border-radius: 5px;
 }
 
@@ -252,14 +268,24 @@ p {
 }
 
 .product-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
   background-color: var(--orange);
   color: var(--white);
   text-align: center;
   width: 100%;
-  padding: 15px;
+  padding: 24px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0px 20px 30px 0px var(--paleOrange);
+}
+
+.product-btn img {
+  filter: brightness(300%);
 }
 
 /* ---------------------- media queries -------------------------------- */
@@ -318,7 +344,7 @@ p {
     padding: 30px 0px;
   }
 
-  .header-container {
+  .header-group {
     gap: 40px;
   }
 
@@ -351,7 +377,7 @@ p {
     opacity: 0.75;
   }
 
-  .active > img:hover{
+  .active > img:hover {
     border: 2px solid #ff7d1a;
     opacity: 0.75;
   }
