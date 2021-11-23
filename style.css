@@ -128,7 +128,7 @@ header {
 }
 
 .avatar {
-  width: 28px;
+  width: 40px;
   cursor: pointer;
   border: 2px solid transparent;
 }
@@ -147,10 +147,14 @@ main {
 }
 
 .lightbox {
-position:relative;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.arrow{
+.arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -160,33 +164,27 @@ position:relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor:pointer;
+  cursor: pointer;
   border-radius: 20px;
-  }
-
-.previous{
- left: 4%;
 }
 
-.next{
-right: 4%;
+.previous {
+  left: 4%;
 }
 
-.product-info {
-  padding: 25px 25px 85px 25px;
+.next {
+  right: 4%;
 }
 
 .product-hero {
   width: 100%;
 }
 
-.thumb-gallery{
+.thumb-gallery {
   display: none;
 }
 
-
 /* ---------------------- product info -------------------------------- */
-
 
 h1 {
   color: var(--orange);
@@ -196,7 +194,6 @@ h1 {
 }
 
 h2 {
-  padding-right: 10px;
   margin-bottom: 20px;
   font-size: 30px;
 }
@@ -269,15 +266,19 @@ p {
 
 @media screen and (min-width: 1000px) {
   body {
-    margin-left: 75px;
-    margin-right: 75px;
+    margin-left: 165px;
+    margin-right: 165px;
   }
 
   main {
-    height: 80vh;
+    display: flex;
     flex-direction: row;
-    margin: 27px 84px;
-    gap: 100px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 90px;
+    justify-content: center;
+    align-items: center;
+    gap: 125px;
   }
 
   header {
@@ -322,25 +323,37 @@ p {
   }
 
   .lightbox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: block;
   }
 
+  .arrow {
+    display: none;
+  }
 
-.arrow{
-  display: none;
-}
-
-
-  .product-img {
+  .product-hero {
     border-radius: 20px;
   }
-  .thumb-gallery-img {
-    width: 100px;
+
+  .thumb-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    margin-top: 25px;
+  }
+
+  .thumb-img > img {
+    width: 100%;
     border-radius: 10px;
-    
+  }
+
+  .thumb-img > img:hover {
+    opacity: 0.75;
+  }
+
+  .active > img:hover{
+    border: 2px solid #ff7d1a;
+    opacity: 0.75;
   }
 
   .price-wrapper {
