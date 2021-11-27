@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,129 +8,143 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet" />
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="header-group left">
-            <div class="hamburger">
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
-            </div>
-
-            <div class="logo">
-                <img src="./images/logo.svg" alt="logo icon" />
-            </div>
-            <nav role="navigation" class="navbar navbar--hidden">
-                <div class="navbar-side-menu">
-                    <img class="navbar-button" src="./images/icon-close.svg" alt="icon close" />
-                    <ul class="navbar-list">
-                        <li class="navbar-list-item">
-                            <a class="navbar-link" href="#">Collections</a>
-                        </li>
-                        <li class="navbar-list-item">
-                            <a class="navbar-link" href="#">Men</a>
-                        </li>
-                        <li class="navbar-list-item">
-                            <a class="navbar-link" href="#">Women</a>
-                        </li>
-                        <li class="navbar-list-item">
-                            <a class="navbar-link" href="#">About</a>
-                        </li>
-                        <li class="navbar-list-item">
-                            <a class="navbar-link" href="#">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-        <div class="header-group right">
-            <div class="cart-wrapper">
-                <img class="cart-btn" src="images/icon-cart.svg" alt="cart icon" />
-                <div class="cart-count"></div>
-            </div>
-
-            <div class="avatar">
-                <img src="./images/image-avatar.png" alt="image avatar" />
-            </div>
+      <div class="header-group left">
+        <div class="hamburger">
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
         </div>
 
-        <div class="cart">
-            <div class="cart-header">Cart</div>
-            <div class="products-in-cart">
-                <div class="item">
-                    <img class="product-img" />
-                    <img id="btnDelete" src="./images/icon-delete.svg" alt="icon delete" />
-                </div>
-            </div>
-            <span class="empty-cart-message hidden"></span>
-            <button>Checkout</button>
+        <div class="logo">
+          <img src="./images/logo.svg" alt="logo icon" />
         </div>
+        <nav role="navigation" class="navbar navbar--hidden">
+          <div class="navbar-side-menu">
+            <img
+              class="navbar-button"
+              src="./images/icon-close.svg"
+              alt="icon close"
+            />
+            <ul class="navbar-list">
+              <li class="navbar-list-item">
+                <a class="navbar-link" href="#">Collections</a>
+              </li>
+              <li class="navbar-list-item">
+                <a class="navbar-link" href="#">Men</a>
+              </li>
+              <li class="navbar-list-item">
+                <a class="navbar-link" href="#">Women</a>
+              </li>
+              <li class="navbar-list-item">
+                <a class="navbar-link" href="#">About</a>
+              </li>
+              <li class="navbar-list-item">
+                <a class="navbar-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="header-group right">
+        <div class="cart-button">
+          <img src="images/icon-cart.svg" alt="cart icon" />
+          <div class="cart-count"></div>
+        </div>
+
+        <div class="avatar">
+          <img src="./images/image-avatar.png" alt="image avatar" />
+        </div>
+      </div>
+
+      <div class="cart cart--hidden">
+        <div class="cart-header">Cart</div>
+        <div class="products-in-cart">
+          <div class="item">
+            <img class="product-img" />
+            <img
+              id="btnDelete"
+              src="./images/icon-delete.svg"
+              alt="icon delete"
+            />
+          </div>
+        </div>
+        <span class="cart-message"> Your cart is empty</span>
+        <button>Checkout</button>
+      </div>
     </header>
 
     <main>
-        <section class="lightbox">
-            <img class="product-hero" src="./images/image-product-1.jpg" alt="sneaker product" />
+      <section class="lightbox">
+        <img
+          class="product-hero"
+          src="./images/image-product-1.jpg"
+          alt="sneaker product"
+        />
 
-            <div class="arrow previous">
-                <img src="./images/icon-previous.svg" alt="icon previous" />
-            </div>
-            <div class="arrow next">
-                <img src="./images/icon-next.svg" alt="icon next" />
-            </div>
-            <div class="thumb-gallery">
-                <div class="thumb-img">
-                    <img src="./images/image-product-1-thumbnail.jpg" alt="thumb-1" />
-                </div>
-                <div class="thumb-img">
-                    <img src="./images/image-product-2-thumbnail.jpg" alt="thumb-2" />
-                </div>
-                <div class="thumb-img">
-                    <img src="./images/image-product-3-thumbnail.jpg" alt="thumb-3" />
-                </div>
-                <div class="thumb-img">
-                    <img src="./images/image-product-4-thumbnail.jpg" alt="thumb-4" />
-                </div>
-            </div>
-        </section>
+        <div class="arrow previous">
+          <img src="./images/icon-previous.svg" alt="icon previous" />
+        </div>
+        <div class="arrow next">
+          <img src="./images/icon-next.svg" alt="icon next" />
+        </div>
+        <div class="thumb-gallery">
+          <div class="thumb-img">
+            <img src="./images/image-product-1-thumbnail.jpg" alt="thumb-1" />
+          </div>
+          <div class="thumb-img">
+            <img src="./images/image-product-2-thumbnail.jpg" alt="thumb-2" />
+          </div>
+          <div class="thumb-img">
+            <img src="./images/image-product-3-thumbnail.jpg" alt="thumb-3" />
+          </div>
+          <div class="thumb-img">
+            <img src="./images/image-product-4-thumbnail.jpg" alt="thumb-4" />
+          </div>
+        </div>
+      </section>
 
-        <section class="product-info">
-            <h1>SNEAKER COMPANY</h1>
-            <h2>Fall Limited Edition Sneakers</h2>
-            <p>
-                These low-profile sneakers are your perfect casual wear companion.
-                Featuring a durable rubber outer sole, they’ll withstand everything
-                the weather can offer.
-            </p>
-            <div class="price-wrapper">
-                <div class="price-group">
-                    <div class="price">$125.00</div>
-                    <div class="price-discount">50%</div>
-                </div>
-                <div class="price-previous">$250.00</div>
-            </div>
+      <section class="product-info">
+        <h1>SNEAKER COMPANY</h1>
+        <h2>Fall Limited Edition Sneakers</h2>
+        <p>
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+        <div class="price-wrapper">
+          <div class="price-group">
+            <div class="price">$125.00</div>
+            <div class="price-discount">50%</div>
+          </div>
+          <div class="price-previous">$250.00</div>
+        </div>
 
-            <div class="button-wrapper">
-                <div class="count-button">
-                    <div class="count-icon count-icon--minus">
-                        <img src="images/icon-minus.svg" alt="minus icon" />
-                    </div>
-                    <strong class="counter">0</strong>
-                    <div class="count-icon count-icon--plus">
-                        <img src="images/icon-plus.svg" alt="plus icon" />
-                    </div>
-                </div>
-
-                <button class="addcart-button">
-                    <img src="./images/icon-cart.svg" alt="icon cart" />
-                    Add to cart
-                </button>
+        <div class="button-wrapper">
+          <div class="count-button">
+            <div class="count-icon count-icon--minus">
+              <img src="images/icon-minus.svg" alt="minus icon" />
             </div>
-        </section>
+            <strong class="counter">0</strong>
+            <div class="count-icon count-icon--plus">
+              <img src="images/icon-plus.svg" alt="plus icon" />
+            </div>
+          </div>
+
+          <button class="addcart-button">
+            <img src="./images/icon-cart.svg" alt="icon cart" />
+            Add to cart
+          </button>
+        </div>
+      </section>
     </main>
     <script src="./script.js"></script>
-</body>
-
+  </body>
 </html>
