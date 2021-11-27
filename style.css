@@ -32,6 +32,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 25px;
+  position: relative;
 }
 
 .header-group {
@@ -86,12 +87,12 @@ header {
   padding: 35px;
 }
 
-.navbar-btn {
+.navbar-button {
   transition: transform 0.5s ease;
   cursor: pointer;
 }
 
-.navbar-btn:hover {
+.navbar-button:hover {
   cursor: pointer;
   transform: rotate(90deg);
 }
@@ -115,10 +116,33 @@ header {
   text-decoration: underline;
 }
 
-.cart-wrapper {
+.cart {
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  top: 110%;
+  right: 10%;
+  width: 360px;
+  cursor: pointer;
+}
+
+.cart--hidden {
+  display: none;
+}
+
+.cart-message--hidden {
+  display: none;
+}
+
+.cart-button {
   display: flex;
   justify-content: center;
   position: relative;
+  cursor: pointer;
+}
+
+.cart-header {
+  border-bottom: 1px solid #b6bcc8;
 }
 
 .cart-count {
@@ -145,7 +169,7 @@ header {
 }
 
 .avatar:hover {
-  border: 2px solid var(--orange);
+  outline: 2px solid var(--orange);
   border-radius: 50%;
 }
 /* ---------------------- lightbox -------------------------------- */
@@ -254,20 +278,25 @@ p {
   color: var(--darkGrayBlue);
 }
 
-.count-btn {
+.count-button {
   display: flex;
   justify-content: space-between;
   background-color: var(--lightGrayBlue);
   margin-bottom: 16px;
-  padding: 22px 24px 22px 24px;
+  padding: 24px;
   border-radius: 5px;
+  width: 100%;
 }
 
 .count-icon {
   cursor: pointer;
 }
 
-.product-btn {
+.button-wrapper {
+  flex-direction: column;
+}
+
+.addcart-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -276,7 +305,7 @@ p {
   color: var(--white);
   text-align: center;
   width: 100%;
-  padding: 24px;
+  padding: 22px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -284,18 +313,13 @@ p {
   box-shadow: 0px 20px 30px 0px var(--paleOrange);
 }
 
-.product-btn img {
+.addcart-button img {
   filter: brightness(300%);
 }
 
 /* ---------------------- media queries -------------------------------- */
 
 @media screen and (min-width: 1000px) {
-  body {
-    margin-left: 165px;
-    margin-right: 165px;
-  }
-
   main {
     display: flex;
     flex-direction: row;
@@ -311,6 +335,13 @@ p {
     border-bottom: 1px solid #b6bcc8;
   }
 
+  .header-group.left {
+    gap: 50px;
+  }
+  .header-group.right {
+    gap: 50px;
+  }
+
   .hamburger {
     display: none;
   }
@@ -323,7 +354,7 @@ p {
     background-color: unset;
   }
 
-  .navbar-btn {
+  .navbar-button {
     display: none;
   }
 
@@ -337,6 +368,7 @@ p {
     margin-top: unset;
     font-weight: unset;
     flex-direction: row;
+    gap: 30px;
   }
 
   .navbar-ink {
@@ -346,6 +378,10 @@ p {
 
   .header-group {
     gap: 40px;
+  }
+
+  .avatar > img {
+    width: 50px;
   }
 
   .lightbox {
@@ -378,11 +414,34 @@ p {
   }
 
   .active > img:hover {
-    border: 2px solid #ff7d1a;
+    outline: 2px solid #ff7d1a;
     opacity: 0.75;
   }
 
-  .price-wrapper {
-    flex-direction: row;
+  .product-info {
+    padding-top: 60px;
   }
+
+  h2 {
+    font-size: 33px;
+  }
+
+  .price-group {
+    margin-bottom: 16px;
+  }
+
+  .price-wrapper {
+    flex-direction: column;
+    align-items: unset;
+  }
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.count-button {
+  margin-bottom: unset;
 }
