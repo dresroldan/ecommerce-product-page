@@ -1,15 +1,15 @@
-// navbar
+// navbar menu display
 const navbar = document.querySelector('.navbar');
 const btnHamburger = document.querySelector('.hamburger');
 const btnMenuClose = document.querySelector('.navbar-button');
+const cartCounterIcon = document.querySelector('.cart-count');
 
 // shopping cart in header
 const cartMenu = document.querySelector('.cart');
 const btnCart = document.querySelector('.cart-button');
-const cartCounter = document.querySelector('.cart-count');
 const cartMessage = document.querySelector('.cart-message');
 const productsInCartTotalPrice = document.querySelector('.products-in-cart');
-const btnDelete = document.querySelector('.delete-button');
+const checkoutButton = document.querySelector('.checkout-button');
 
 // product hero & slideshow gallery
 const btnNext = document.querySelector('.next');
@@ -82,21 +82,37 @@ const addItemToCart = () => {
   productsInCartTotalPrice.innerHTML = productHTML;
 
   updateCart();
+
+  const btnDelete = document.querySelector('.delete-button');
+  btnDelete.addEventListener('click', onBtnDeleteClick);
 };
 
 const onBtnDeleteClick = () => {
   productsInCart--;
   updateCart();
+  const counterInMenu = document.querySelector('.count');
+  const totalAmount = document.querySelector('.total-amount');
+  counterInMenu.innerHTML = productsInCart;
+  totalAmount.innerHTML = `$${(price * discount * productsInCart).toFixed(2)}`;
+
+  if (productsInCart == 0) {
+    productsInCartTotalPrice.innerHTML = '';
+  }
 };
 
 const updateCart = () => {
   updateCartIcon();
   updateEmptyCartMessage();
+  updateCheckoutButton();
 };
 
 const updateCartIcon = () => {
   // displays count on cart icon
-  cartCounter.innerHTML = productsInCart;
+  if (productsInCart === 0) {
+    cartCounterIcon.innerHTML = '';
+  } else {
+    cartCounterIcon.innerHTML = productsInCart;
+  }
 };
 
 const updateEmptyCartMessage = () => {
@@ -104,6 +120,15 @@ const updateEmptyCartMessage = () => {
     cartMessage.classList.add('cart-message--hidden');
   } else {
     cartMessage.classList.remove('cart-message--hidden');
+  }
+};
+
+const updateCheckoutButton = () => {
+  if (productsInCart >= 1) {
+    checkoutButton.classList.remove('checkout-button--hidden');
+  } else {
+
+    checkoutButton.classList.add('checkout-button--hidden');
   }
 };
 
@@ -128,4 +153,3 @@ btnPlusIcon.addEventListener('click', addItemcount);
 btnMinusIcon.addEventListener('click', removeItemcount);
 btnAddtoCart.addEventListener('click', addItemToCart);
 btnCart.addEventListener('click', openCartMenu);
-btnDelete.addEventListener('click', onBtnDeleteClick);
