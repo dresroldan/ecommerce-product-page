@@ -16,61 +16,67 @@
 
   <body>
     <header>
-      <div class="header-group left">
-        <div class="hamburger">
-          <div class="hamburger-line"></div>
-          <div class="hamburger-line"></div>
-          <div class="hamburger-line"></div>
+      <div class="header__group header__group-1">
+        <div class="burger-icon">
+          <div class="burger-icon__line"></div>
+          <div class="burger-icon__line"></div>
+          <div class="burger-icon__line"></div>
         </div>
 
-        <div class="logo">
-          <img src="./images/logo.svg" alt="logo icon" />
+        <div class="branding">
+          <img class="branding__logo" src="./images/logo.svg" alt="logo icon" />
         </div>
-        <nav role="navigation" class="navbar navbar--hidden">
-          <div class="navbar-side-menu">
+
+        <nav class="navbar navbar--hidden" role="navigation">
+          <div class="navbar__menu">
             <img
-              class="navbar-button"
+              class="navbar-icon"
               src="./images/icon-close.svg"
               alt="icon close"
             />
-            <ul class="navbar-list">
-              <li class="navbar-list-item">
-                <a class="navbar-link" href="#">Collections</a>
+            <ul class="navbar__list">
+              <li class="navbar__list-item">
+                <a class="navbar__link" href="#">Collections</a>
               </li>
-              <li class="navbar-list-item">
-                <a class="navbar-link" href="#">Men</a>
+              <li class="navbar__list-item">
+                <a class="navbar__link" href="#">Men</a>
               </li>
-              <li class="navbar-list-item">
-                <a class="navbar-link" href="#">Women</a>
+              <li class="navbar__list-item">
+                <a class="navbar__link" href="#">Women</a>
               </li>
-              <li class="navbar-list-item">
-                <a class="navbar-link" href="#">About</a>
+              <li class="navbar__list-item">
+                <a class="navbar__link" href="#">About</a>
               </li>
-              <li class="navbar-list-item">
-                <a class="navbar-link" href="#">Contact</a>
+              <li class="navbar__list-item">
+                <a class="navbar__link" href="#">Contact</a>
               </li>
             </ul>
           </div>
         </nav>
       </div>
-      <div class="header-group right">
-        <div class="cart-button">
-          <img src="images/icon-cart.svg" alt="cart icon" />
-          <div class="cart-count"></div>
+
+      <div class="header__group header__group-2">
+        <div class="cart-icon__wrap">
+          <img class="cart-icon" src="images/icon-cart.svg" alt="cart icon" />
+          <div class="cart-icon__count"></div>
         </div>
 
-        <div class="avatar">
-          <img src="./images/image-avatar.png" alt="image avatar" />
+        <div class="avatar__wrap">
+          <img
+            class="avatar"
+            src="./images/image-avatar.png"
+            alt="image avatar"
+          />
         </div>
       </div>
 
-      <div class="cart cart--hidden">
-        <div class="cart-header">Cart</div>
+      <div class="cart-menu cart-menu--hidden">
+        <div class="cart-menu__title">Cart</div>
 
-        <div class="products-in-cart"></div>
+        <div class="cart-menu__products"></div>
 
-        <div class="cart-message">Your cart is empty</div>
-        <button class="checkout-button checkout-button--hidden">
+        <div class="cart-menu__message">Your cart is empty</div>
+        <button class="cart-menu__button cart-menu__button--hidden">
           Checkout
         </button>
       </div>
@@ -83,58 +89,92 @@
           src="./images/image-product-1.jpg"
           alt="sneaker product"
         />
+        <div class="thumb-gallery__container">
+          <div class="thumb-gallery__wrap">
+            <img
+              class="thumb-gallery__image"
+              src="./images/image-product-1-thumbnail.jpg"
+              alt="thumb-1"
+            />
+          </div>
+          <div class="thumb-gallery__wrap">
+            <img
+              class="thumb-gallery__image"
+              src="./images/image-product-2-thumbnail.jpg"
+              alt="thumb-2"
+            />
+          </div>
 
-        <div class="arrow previous">
-          <img src="./images/icon-previous.svg" alt="icon previous" />
+          <div class="thumb-gallery__wrap">
+            <img
+              class="thumb-gallery__image"
+              src="./images/image-product-3-thumbnail.jpg"
+              alt="thumb-3"
+            />
+          </div>
+
+          <div class="thumb-gallery__wrap">
+            <img
+              class="thumb-gallery__image"
+              src="./images/image-product-4-thumbnail.jpg"
+              alt="thumb-4"
+            />
+          </div>
         </div>
-        <div class="arrow next">
-          <img src="./images/icon-next.svg" alt="icon next" />
+
+        <div class="arrow-icon__wrap arrow-icon__wrap--previous">
+          <img
+            class="arrow-icon"
+            src="./images/icon-previous.svg"
+            alt="icon previous"
+          />
         </div>
-        <div class="thumb-gallery">
-          <div class="thumb-img">
-            <img src="./images/image-product-1-thumbnail.jpg" alt="thumb-1" />
-          </div>
-          <div class="thumb-img">
-            <img src="./images/image-product-2-thumbnail.jpg" alt="thumb-2" />
-          </div>
-          <div class="thumb-img">
-            <img src="./images/image-product-3-thumbnail.jpg" alt="thumb-3" />
-          </div>
-          <div class="thumb-img">
-            <img src="./images/image-product-4-thumbnail.jpg" alt="thumb-4" />
-          </div>
+
+        <div class="arrow-icon__wrap arrow-icon__wrap--next">
+          <img
+            class="arrow-icon"
+            src="./images/icon-next.svg"
+            alt="icon next"
+          />
         </div>
       </section>
 
-      <section class="product-info">
-        <h1>SNEAKER COMPANY</h1>
-        <h2>Fall Limited Edition Sneakers</h2>
-        <p>
+      <section class="product">
+        <h1 class="product__brand-name">SNEAKER COMPANY</h1>
+        <h2 class="product__title">Fall Limited Edition Sneakers</h2>
+        <p class="product__description">
           These low-profile sneakers are your perfect casual wear companion.
           Featuring a durable rubber outer sole, they’ll withstand everything
           the weather can offer.
         </p>
-        <div class="price-wrapper">
-          <div class="price-group">
+
+        <div class="price__container">
+          <div class="price__wrap">
             <div class="price">$125.00</div>
-            <div class="price-discount">50%</div>
+            <div class="price__discount">50%</div>
           </div>
-          <div class="price-previous">$250.00</div>
+          <div class="price__previous">$250.00</div>
         </div>
 
-        <div class="button-wrapper">
-          <div class="count-button">
+        <div class="action-button__container">
+          <div class="count-button__wrap">
             <div class="count-icon count-icon--minus">
               <img src="images/icon-minus.svg" alt="minus icon" />
             </div>
+
             <strong class="counter">0</strong>
+
             <div class="count-icon count-icon--plus">
               <img src="images/icon-plus.svg" alt="plus icon" />
             </div>
           </div>
 
-          <button class="addcart-button">
-            <img src="./images/icon-cart.svg" alt="icon cart" />
+          <button class="add-cart__button">
+            <img
+              class="add-cart__icon"
+              src="./images/icon-cart.svg"
+              alt="icon cart"
+            />
             Add to cart
           </button>
         </div>

@@ -1,26 +1,26 @@
 // navbar menu display
 const navbar = document.querySelector('.navbar');
-const btnHamburger = document.querySelector('.hamburger');
-const btnMenuClose = document.querySelector('.navbar-button');
-const cartCounterIcon = document.querySelector('.cart-count');
+const btnHamburger = document.querySelector('.burger-icon');
+const btnMenuClose = document.querySelector('.navbar-icon');
+const cartCounterIcon = document.querySelector('.cart-icon__count');
 
 // shopping cart in header
-const cartMenu = document.querySelector('.cart');
-const btnCart = document.querySelector('.cart-button');
-const cartMessage = document.querySelector('.cart-message');
-const productsInCartTotalPrice = document.querySelector('.products-in-cart');
-const checkoutButton = document.querySelector('.checkout-button');
+const cartMenu = document.querySelector('.cart-menu');
+const btnCart = document.querySelector('.cart-icon');
+const cartMessage = document.querySelector('.cart-menu__message');
+const productsInCartTotalPrice = document.querySelector('.cart-menu__products');
+const checkoutButton = document.querySelector('.cart-menu__button');
 
 // product hero & slideshow gallery
-const btnNext = document.querySelector('.next');
-const btnPrev = document.querySelector('.previous');
-const gallery = document.querySelectorAll('.thumb-img');
 const heroImg = document.querySelector('.product-hero');
+const gallery = document.querySelectorAll('.thumb-gallery__wrap');
+const btnNext = document.querySelector('.arrow-icon__wrap--next');
+const btnPrev = document.querySelector('.arrow-icon__wrap--previous');
 
 // add to shopping cart counter and button
 const btnPlusIcon = document.querySelector('.count-icon--plus');
 const btnMinusIcon = document.querySelector('.count-icon--minus');
-const btnAddtoCart = document.querySelector('.addcart-button');
+const btnAddtoCart = document.querySelector('.add-cart__button');
 const counter = document.querySelector('.counter');
 
 // numerical values
@@ -28,6 +28,51 @@ let countValue = 0;
 let productsInCart = 0;
 let price = 250.0;
 let discount = 0.5;
+let slideIndex = 1;
+
+console.log('this is index ' + slideIndex);
+
+const nextSlide = () => {
+  showSlides(1);
+};
+
+const showSlides = (value) => {
+  if (slideIndex + value > 1) {
+    slideIndex += value;
+    console.log('this is index ' + slideIndex);
+  }
+};
+
+const prevSlide = () => {
+  let currentSlide = slideIndex - 1;
+
+  console.log(currentSlide);
+
+  showSlides(currentSlide);
+};
+
+// function showSlides(i) {
+//   slideIndex += i;
+
+//   for (i = 0; i < gallery.length; i++) {
+//     gallery[i].style.display = 'none';
+//   }
+
+//   if (slideIndex > gallery.length - 1) {
+//     slideIndex = 0;
+//   }
+//   if (i < 0) {
+//     slideIndex = gallery.length - 1;
+//   }
+
+//   gallery[slideIndex].style.display = 'block';
+
+//   // gallery.forEach((img) => {
+//   //   img.style.display = 'none';
+//   // });
+
+//   // gallery[slideIndex - 1].style.display = 'block';
+// }
 
 const onHamburgerClick = () => {
   navbar.classList.remove('navbar--hidden');
@@ -38,7 +83,7 @@ const onMenuCloseClick = () => {
 };
 
 const openCartMenu = () => {
-  cartMenu.classList.toggle('cart--hidden');
+  cartMenu.classList.toggle('cart-menu--hidden');
 };
 
 const addItemcount = () => {
@@ -61,7 +106,7 @@ const addItemToCart = () => {
 
   const productHTML = `   
   <div class="item">
-      <img class="product-img" src="./images/image-product-1.jpg" alt="sneaker product"/>
+      <img class="product__img" src="./images/image-product-1.jpg" alt="sneaker product"/>
       <div class="product-details">
           <div class="product-name">Autumn Limited Edition...</div>
           <div class="price-group">
@@ -117,18 +162,17 @@ const updateCartIcon = () => {
 
 const updateEmptyCartMessage = () => {
   if (productsInCart > 0) {
-    cartMessage.classList.add('cart-message--hidden');
+    cartMessage.classList.add('cart-menu__message--hidden');
   } else {
-    cartMessage.classList.remove('cart-message--hidden');
+    cartMessage.classList.remove('cart-menu__message--hidden');
   }
 };
 
 const updateCheckoutButton = () => {
   if (productsInCart >= 1) {
-    checkoutButton.classList.remove('checkout-button--hidden');
+    checkoutButton.classList.remove('cart-menu__button--hidden');
   } else {
-
-    checkoutButton.classList.add('checkout-button--hidden');
+    checkoutButton.classList.add('cart-menu__button--hidden');
   }
 };
 
@@ -153,3 +197,6 @@ btnPlusIcon.addEventListener('click', addItemcount);
 btnMinusIcon.addEventListener('click', removeItemcount);
 btnAddtoCart.addEventListener('click', addItemToCart);
 btnCart.addEventListener('click', openCartMenu);
+btnNext.addEventListener('click', nextSlide);
+
+btnPrev.addEventListener('click', prevSlide);

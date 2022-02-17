@@ -1,8 +1,8 @@
 # Frontend Mentor - E-commerce product page solution
 
-*WIP
+\*WIP
 
-This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 <!-- ## Table of contents -->
 
@@ -17,7 +17,6 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments) -->
-
 
 ## Overview
 
@@ -38,7 +37,6 @@ Users should be able to:
 
 ![](./images/mobile-design.jpg)
 
-
 <!-- ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
@@ -54,7 +52,6 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - Javascript
-
 
 <!-- ### What I learned
 
